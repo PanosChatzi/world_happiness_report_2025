@@ -9,7 +9,7 @@ happy_df <- readRDS("data/happiness_data.RDS")
 
 # Define colours for regions
 region_colors <- c(
-  "Europe & Central Asia" = "#3a539b",
+  "Europe & Central Asia" = "#2e427c",
   "East Asia & Pacific" = "#8da0cb",
   "Latin America & Caribbean" = "#e66f63",
   "Middle East & North Africa" = "#e1a03a",
@@ -58,7 +58,13 @@ server <- function(input, output) {
            caption = "Sources: World Happiness Report, 2025; World Bank, 2023",
            x = "GDP ($), log scale",
            y = "") +
-      guides(colour = "none", fill = "none", size = "none") +
+      
+      guides(fill = guide_legend(title = NULL,
+                                 nrow = 1,
+                                 byrow = TRUE,
+                                 override.aes = list(size = 4, stroke = 0.5, alpha = 0.8)),  # Smaller point size
+             colour = "none", 
+             size = "none") +
       theme_minimal() +
       theme(
         axis.text = element_text(size = 10, color = "black"),
@@ -67,8 +73,17 @@ server <- function(input, output) {
         panel.grid.minor.x = element_blank(),
         panel.grid.minor.y = element_blank(),
         plot.caption = element_text(hjust = 0),
-        plot.margin = margin(10, 25, 10, 10)
+        plot.margin = margin(10, 25, 10, 15),  # Increased right margin
+        # Legend adjustments
+        legend.position = "bottom",
+        legend.box = "horizontal",
+        legend.text = element_text(size = 8),  # Smaller text
+        legend.margin = margin(t = 5, b = 5, l = 5, r = 5),  # Reduced margins
+        legend.key.size = unit(0.7, "lines"),  # Smaller key size
+        legend.spacing.x = unit(0.3, 'cm'),  # Reduced spacing between items
+        legend.box.margin = margin(-10, 0, 0, 0)  # Negative top margin to pull legend up
       ) +
+      
       scale_y_continuous(position = "right") +
       annotate(
         "text",
