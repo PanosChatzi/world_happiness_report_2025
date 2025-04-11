@@ -9,11 +9,11 @@ Inspired by an article in **The Economist**, this project visualizes the associa
 ## Features
 
 - Interactive scatter plot showing the relationship between GDP per capita and happiness scores
+- Annotations for Greece and the top 5 happiest countries (Finland, Denmark, Iceland, Sweden, and Netherlands)
+- Linear trend line showing the overall relationship
+- Hover tooltips displaying detailed information for each country
 - Data points sized by country population
 - Color-coded by region
-- Hover tooltips displaying detailed information for each country
-- Annotations for the top 5 happiest countries and Greece
-- Linear trend line showing the overall relationship
 - Zoom functionality for detailed exploration
 
 ## Shiny App
