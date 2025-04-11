@@ -42,7 +42,7 @@ You can access the interactive visualization at:
    ```R
    install.packages(c("shiny", "ggplot2", "ggiraph", "readxl", "janitor", "ggrepel", "ggtext"))
    ```
-3. Place your `happiness_gdp_pop.xlsx` file in the project directory
+3. Place your `happiness_gdp_pop.xlsx` or `.RDS` file in the project directory
 4. Run the Shiny app:
    ```R
    shiny::runApp()
