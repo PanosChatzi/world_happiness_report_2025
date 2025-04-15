@@ -1,8 +1,6 @@
 # World Happiness Report 2025
 
-## Overview
-
-Inspired by an article in **The Economist**, this project visualizes the association between wealth and happiness using data from the World Happiness Report and the World Bank. [The Interactive GDP and Happiness Report](https://panoschatzi.github.io/world_happiness_report_2025/happiness_gdp_interactive.html) allows users to explore how GDP relates to life satisfaction scores across different countries and regions of the world.
+Inspired by an article in **The Economist**, this project visualizes the association between wealth and happiness using data from the World Happiness Report and the World Bank. The Interactive GDP and Happiness Report allows users to explore how GDP relates to life satisfaction scores across different countries and regions of the world.
 
 ## Features
 
